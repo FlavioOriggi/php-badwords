@@ -6,6 +6,7 @@
     Brava Giulia e Brava Giulia!";
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,14 +21,18 @@
     
     <p> <?php echo "Lunghezza paragrafo incensurato: " . strlen($paragrafo); ?> </p>
 
-
-
-    <h5> <?php $paragrafo_censurato = str_replace ('Brava', '***', $paragrafo); echo $paragrafo_censurato ?> <h5>   
     
-    <p> <?php echo "Lunghezza paragrafo censurato: " . strlen($paragrafo_censurato); ?> </p>
+    <?php $censurato = str_replace( $_GET['cancella'], '***', $paragrafo); ?>
+
+    <h5> <?php echo $censurato ?> </h5>  
+    
+    <p> <?php echo "Lunghezza paragrafo censurato: " . strlen($censurato); ?> </p>
 
 
 </body>
 </html>
+
+
+
 
 
